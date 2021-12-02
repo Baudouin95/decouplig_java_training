@@ -11,9 +11,11 @@ public class HumanPlayer implements Player{
     private final Logger logger = LoggerFactory.getLogger("Player");
     @Override
     public long askNextGuess() {
-        logger.log("Veuillez donner un nombre");
+        System.out.println("Veuillez donner un nombre");
         Scanner sc = new Scanner(System.in);
-        return sc.nextLong();
+        long nbr = sc.nextLong();
+        logger.log("" + nbr);
+        return nbr;
     }
 
     @Override
